@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Users</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let location of locations" [routerLink]="['/profile/' + info + '/' + location.id]">
+      <ion-label>{{ location.name }}</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
